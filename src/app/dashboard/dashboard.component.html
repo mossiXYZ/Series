@@ -1,0 +1,9 @@
+<h3>Top Series</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let serie of series" class="col-1-5" 
+    routerLink="/detail/{{serie.idSERIE}}">
+    <div class="module hero">
+      <h4>{{serie.titre}}</h4>
+    </div>
+  </a>
+</div>

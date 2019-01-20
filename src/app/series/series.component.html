@@ -1,11 +1,10 @@
 
 <h2>Nos Séries</h2>
 <ul class="heroes">
-  <li *ngFor="let serie of series" 
-  [class.selected]="serie === selectedSerie"
-  (click)="onSelect(serie)" 
-  >
-    <span class="badge">{{serie.idSERIE}}</span> {{serie.titre}}
+  <li *ngFor="let serie of series">
+    <a routerLink="/detail/{{serie.idSERIE}}">
+      <span class="badge">{{serie.idSERIE}}</span> {{serie.titre}}
+    </a>
   </li>
 </ul>
 

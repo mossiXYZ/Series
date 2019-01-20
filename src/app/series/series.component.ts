@@ -9,12 +9,7 @@ import { Serie } from '../serie';
 })
 export class SeriesComponent implements OnInit {
 
-
- 
   series : Serie[];
-  selectedSerie: Serie;
-
-
 
   constructor(private serieService: SerieService) { }
 
@@ -26,7 +21,5 @@ export class SeriesComponent implements OnInit {
     this.serieService.getSeries()
       .subscribe(series => this.series = series)
   }
-  onSelect(serie: Serie): void {
-    this.selectedSerie = serie;
-  }
+
 }

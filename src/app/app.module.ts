@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { SeriesComponent } from './series/series.component';
 import { SerieDetailComponent } from './serie-detail/serie-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SeriesComponent,
     SerieDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     // no need to place any providers due to the `providedIn` flag...

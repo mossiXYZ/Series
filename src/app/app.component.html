@@ -1,4 +1,7 @@
-
-  <h1>{{ title }} </h1>
-  <app-series></app-series>
-  <app-messages></app-messages>
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/series">Series</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>
