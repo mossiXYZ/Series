@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SerieService } from '../serie.service';
 import { Serie } from '../serie';
-import { SERIES } from '../mock-series';
 
 @Component({
   selector: 'app-series',
@@ -11,17 +11,21 @@ export class SeriesComponent implements OnInit {
 
 
  
-  series = SERIES;
+  series : Serie[];
   selectedSerie: Serie;
 
 
 
-  constructor() { }
+  constructor(private serieService: SerieService) { }
 
   ngOnInit() {
+    this.getSeries();
   }
 
-
+  getSeries(): void {
+    this.serieService.getSeries()
+      .subscribe(series => this.series = series)
+  }
   onSelect(serie: Serie): void {
     this.selectedSerie = serie;
   }
