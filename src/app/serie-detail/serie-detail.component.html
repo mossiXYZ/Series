@@ -1,0 +1,11 @@
+<div *ngIf="serie">
+
+  <h2>{{serie.titre | uppercase}} Details</h2>
+  <div><span>id: </span>{{serie.idSERIES}}</div>
+  <div>
+    <label>titre:
+      <input [(ngModel)]="serie.titre" placeholder="titre"/>
+    </label>
+  </div>
+
+</div>
