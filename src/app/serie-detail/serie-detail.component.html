@@ -1,12 +1,32 @@
 <div *ngIf="serie">
 
-  <h2>{{serie.titre | uppercase}} Details</h2>
+  <h2>{{serie.titre | uppercase}} Details:</h2>
   <div><span>id: </span>{{serie.idSERIE}}</div>
   <div>
     <label>titre:
       <input [(ngModel)]="serie.titre" placeholder="titre"/>
     </label>
   </div>
+
+  <div>
+    <label>description:
+      <input [(ngModel)]="serie.description" placeholder="description"/>
+    </label>
+  </div>
+
+  <div>
+    <label>annee:
+      <input [(ngModel)]="serie.annee" placeholder="annee"/>
+    </label>
+  </div>
+
+  <div>
+    <label>image:
+      <input [(ngModel)]="serie.image" placeholder="image"/>
+    </label>
+  </div>
+
+
   <button (click)="goBack()">go back</button>
 
 </div>
